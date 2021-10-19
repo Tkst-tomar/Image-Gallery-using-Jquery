@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <script src="Additional Files/Jquery/jquery-3.6.0.min.js"></script>
+    <style>
+        *{margin: 0px; padding: 0px;}
+        .img-box{display: flex;flex-wrap: wrap;overflow-y: scroll;width: 500px;height: 500px;}
+        .image{padding: 20px;}
+        .image img{width: 100px;height: 80px;transition: 0.2s;padding: 5px;}
+        .image img:hover{transform: scale(1.25);border: 4px skyblue solid;}
+       .contianer{width: auto;position: absolute;top:10%; right: 20%;}
+    </style>
+</head>
+<body>
+    <div class="img-box">
+        <div class="image"><img src="img/1.jpg" alt=""></div>
+        <div class="image"><img src="img/2.jpg" alt=""></div>
+        <div class="image"><img src="img/3.jpg" alt=""></div>
+        <div class="image"><img src="img/4.jpg" alt=""></div>
+        <div class="image"><img src="img/5.jpg" alt=""></div>
+        <div class="image"><img src="img/1.jpg" alt=""></div>
+        <div class="image"><img src="img/2.jpg" alt=""></div>
+        <div class="image"><img src="img/3.jpg" alt=""></div>
+        <div class="image"><img src="img/5.jpg" alt=""></div>
+        <div class="image"><img src="img/5.jpg" alt=""></div>
+        
+    </div>
+  
+    <!-- <div class="bttn">
+        <button class="btn1" id="next">Next</button>
+        <button class="btn2" id="prev">Previous</button>
+    </div> -->
+
+    <div class="contianer">
+        <img src="img/1.jpg" alt="" id="image">
+    </div>
+
+
+
+
+    <!-- <div class="container"> 
+        <div class="image1 box"><img src="img/1.jpg" alt=""></div>
+        <div class="image2 box"><img src="img/2.jpg" alt=""></div>
+        <div class="image3 box"><img src="img/3.jpg" alt=""></div>
+        <div class="image4 box"><img src="img/4.jpg" alt=""></div>
+        <div class="image5 box"><img src="img/5.jpg" alt=""></div>
+        <div class="image6 box"><img src="img/1.jpg" alt=""></div>
+        <div class="image7 box"><img src="img/2.jpg" alt=""></div>
+        <div class="image8 box"><img src="img/3.jpg" alt=""></div>
+        <div class="image9 box"><img src="img/5.jpg" alt=""></div>
+        <div class="image10 box"><img src="img/5.jpg" alt=""></div>
+    </div>-->
+    <script>
+        $(document).ready(function(){
+          
+            $("img").click(function(){
+           
+                  var x= $(this).attr("src")
+                  
+               $("#image").attr("src",x)
+            })
+        });
+    </script> 
+</body>
+</html>
